@@ -1560,7 +1560,7 @@ async def universal_drm_handler(bot: Client, m: Message):
                 keys_string = " ".join([f"--key {key}" for key in keys])
 
             elif "classplusapp" in url:
-                signed_api = f"https://covercel.vercel.app/extract_keys?url={'url'}@bots_updatee&user_id={8312514574}"
+                signed_api = f"https://covercel.vercel.app/extract_keys?url={url}@bots_updatee&user_id={8312514574}"
                 response = requests.get(signed_api, timeout=20)
                 url = response.text.strip()
                 url = response.json()['url']  
